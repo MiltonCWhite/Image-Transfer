@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>Image Result</title>
+    <link href="./static/css/style.css" rel="stylesheet"  >
+</head>
+<body>
+    <h1>Processed Image</h1>
+    <h2>Original Image</h2>
+    <img src="{{ url_for('static', filename='uploads/' + original) }}" alt="Original Image">
+    <h2>Processed Image</h2>
+    <img src="{{ url_for('static', filename='uploads/' + processed) }}" alt="Processed Image">
+</body>
+</html>
+
+

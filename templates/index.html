@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Image Upload</title>
+    <link href="./static/css/style.css" rel="stylesheet"  >
+</head>
+<body>
+    <h1>Upload Your Image </h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <select name="option" onchange="showHideFields(this)">
+            <option value="blur">Blur</option>
+            <option value="sharpen">Sharpen</option>
+            <option value="smooth">Smooth</option>
+            <option value="greyscale">Grayscale</option>
+            <option value="rotate">Rotate</option>
+            <option value="resize">Resize</option>
+            <option value="convert_to_png">Convert to PNG</option>
+        </select>
+        <div id="rotateFields" style="display: none;">
+            <label for="degrees">Degrees:</label>
+            <input type="number" name="degrees" id="degrees">
+        </div>
+        <div id="resizeFields" style="display: none;">
+            <label for="width">Width:</label>
+            <input type="number" name="width" id="width">
+            <label for="height">Height:</label>
+            <input type="number" name="height" id="height">
+        </div>
+        <input type="submit" value="Upload">
+    </form>
+    <script>
+        function showHideFields(select) {
+            document.getElementById('rotateFields').style.display = select.value === 'rotate' ? 'block' : 'none';
+            document.getElementById('resizeFields').style.display = select.value === 'resize' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
+
