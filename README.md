@@ -50,21 +50,6 @@ Usage
 3. Submit the Form: Click the "Upload" button to process the image.
 4. View the Result: The original and processed images will be displayed on a new page.
 
-Project Structure
-image-transfer/
-│
-├── image.py                   # Main Flask application file
-├── templates/
-│   ├── index.html             # HTML template for the image upload form
-│   └── result.html            # HTML template for displaying the processed image
-│
-├── static/
-│   ├── css/
-│   │   └── style.css          # Stylesheet for the web interface
-│   └── uploads/               # Directory for uploaded and processed images
-│
-└── requirements.txt           # Python dependencies file
-
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
