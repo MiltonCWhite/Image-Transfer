@@ -33,7 +33,7 @@ Image Transfer is a web application that allows users to upload an image and app
 2. Install the required packages:
 
     ---bash
-    pip install -r requirements.txt
+    pip freeze > requirements.txt
     
 3. Run the application:
 
